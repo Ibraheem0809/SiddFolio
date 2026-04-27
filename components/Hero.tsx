@@ -37,8 +37,10 @@ const Hero = () => {
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi, I&apos;m <span className="text-purple-500">Sidd</span>, a
-            Next.js Developer based in India.
+            Hi, I&apos;m{" "}
+            <span className="text-purple-500">Md Ibraheem Siddiqui</span>
+            <br /> A <span className="text-purple-500">Web Developer</span>{" "}
+            based in India.
           </p>
           <a href="#about">
             <MagicButton
