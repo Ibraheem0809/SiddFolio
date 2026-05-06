@@ -119,7 +119,7 @@
     },
   ];
 
-  export const skills = [
+  export const SKILLS = [
     {
       id: 1,
       title: "Frontend Development",
@@ -172,4 +172,85 @@
       imgName: ["Git","VS Code","Postman","npm"],
     },
   ];
+
+  export const COURSES = [
+    {
+      id: "fs-1",
+      title: "Ultimate Web Development Course 2026",
+      instructor: "Haris Ali Khan",
+      description:
+        "End-to-end web development covering HTML, CSS, JavaScript, React, Node, Express, MongoDB and deployment workflows.",
+      skills: ["React", "Node.js", "MongoDB", "REST APIs", "Authentication"],
+      certificates: [
+        { label: "Certificate ", url: "https://drive.google.com/file/d/1KL1Jp1Y7S94mNjsnIAlVsweShNpf3StT/view?usp=drive_link" },
+        
+      ],
+    },
+    {
+      id: "java-1",
+      title: "DSA Decode - Webinar",
+      instructor: "Aditya Gupta",
+      description:
+        "Deep dive into data structures & algorithms with hands-on problem solving across 10+ patterns.",
+      skills: ["Java", "DSA", "Problem Solving"],
+      certificates: [
+        { label: "Certificate ", url: "https://drive.google.com/file/d/1zbbs0tZQe3fLvjLTpZhA1v1RrSMYOsp9/view?usp=drive_link" },
+        
+      ],
+    },
+    /* {
+      id: "next-1",
+      title: "Advanced Next.js & System Design",
+      instructor: "Lee Robinson",
+      description:
+        "Production-grade Next.js architecture, RSC, edge runtime, caching strategies and full-stack patterns.",
+      skills: ["Next.js", "RSC", "Edge", "Caching", "System Design"],
+      certificates: [
+        { label: "Certificate 1", url: "https://drive.google.com" },
+        { label: "Certificate 2", url: "https://drive.google.com" },
+        { label: "Certificate 3", url: "https://drive.google.com" },
+      ],
+    }, */
+  ];
   
+
+  export const DSA_PATTERNS = [
+    { name: "Two Pointers", solved: 15, total:15, link : "https://drive.google.com/file/d/1YNYnxtBzWPBJqeh4z1lL5_EOc2STRrV5/view?usp=drive_link" },
+    { name: "Fast & Slow Pointers", solved: 10, total:15, link : "https://drive.google.com/file/d/1Q07FP81ZzcE6PtKGEKQCz_OnK3rH1vWU/view?usp=drive_link" },
+    { name: "Sliding Window", solved: 8, total:15, link : "https://drive.google.com/file/d/1e2l8QBRm-_oHwtkj7w6sauBP0vvlIwoV/view?usp=drive_link" },
+    { name: "Prefix Sum", solved: 9, total:15, link : "https://drive.google.com/file/d/1u1xwl2-jeb9HXaID5RVjSO8C2L78q9KO/view?usp=drive_link" },
+    { name: "Merge Interval", solved: 11, total:15, link : "https://drive.google.com/file/d/11Ru2I0K3TOgeIT1wpmVe9a_hAu-5tJ_q/view?usp=drive_link" },
+    { name: "Binary Search", solved: 10, total:15, link : "https://drive.google.com/file/d/1wq2f-7Swd4NTdlqfGZt2Th6ijKv8tdiX/view?usp=drive_link" },
+    { name: "HashMap", solved: 15, total:15, link : "https://drive.google.com/file/d/17lsWcYOjFbVt_dfm9qbOiksIy7mkke5a/view?usp=drive_link" },
+    { name: "Stack", solved: 8, total:15, link : "https://drive.google.com/file/d/1bFAII5-KWOV1k3NLKuHVc2qzdIp3zb0R/view?usp=drive_link" },
+    { name: "Queue", solved: 9, total:15, link : "https://drive.google.com/file/d/1G6tiK0I3rrOm6Tlij3HZm_v0hBUX5F6R/view?usp=drive_link" },
+  
+    { name: "Min & Max Heap", solved: 7, total:15, link : "https://drive.google.com/file/d/1CDDyHEA-K8qPIIPfHbcsK1-k6r6oz0w9/view?usp=drive_link" },
+    { name: "BFS", solved: 0, total:15, link : "https://drive.google.com/file/d/1nvpg14kFju934-hQI12n8ZWkQE1MK5y2/view?usp=drive_link" },
+    { name: "DFS", solved: 0, total:15, link : "https://drive.google.com/file/d/1bE0fFolrJqlVt-kXKdfRQsSU_FyLZSGa/view?usp=drive_link" },
+    { name: "Graph", solved: 0, total:15, link : "https://drive.google.com/file/d/1OcjIVwDkUW46MSrVsJpXSwv6SbvKSHgm/view?usp=drive_link" },
+    { name: "Dijkstra", solved: 0, total:15, link : "https://drive.google.com/file/d/1ONwR1Wj_14tl-79mk_xm6ubg1wpNm_6I/view?usp=drive_link" },
+    { name: "Topological Sum", solved: 0, total:15, link : "https://drive.google.com/file/d/1P_Iaud_PDsM3TSoBi1RlpgL5X8o0K33n/view?usp=drive_link" },
+    { name: "Trie", solved: 0, total:15, link : "https://drive.google.com/file/d/1S1wX8qw_CfqZAyz7q6ldrKx58VeotCdR/view?usp=drive_link" },
+    { name: "Greedy", solved: 2, total:15, link : "https://drive.google.com/file/d/1hJKweMpBzqg8qa1QgMywPbJEczTJOC9A/view?usp=drive_link" },
+    { name: "Dynamic Programming", solved: 6, total:15, link : "https://drive.google.com/file/d/1DDS-A9FbM61m8UkyN8mqZQ3Qe6DvT8Sl/view?usp=drive_link" },
+    { name: "Backtracking", solved: 10, total:15, link : "https://drive.google.com/file/d/1PAUqDoDvylSplZRN95ZaNiLI1PFDtZhA/view?usp=drive_link" },
+    { name: "Bitwise", solved: 8, total:15, link : "https://drive.google.com/file/d/1GSbwI9wnbsGCOYATJKe6gfg4Jlqfdf2M/view?usp=drive_link" },
+  
+  
+  ];
+
+  export const BLOG_POSTS = [
+    {
+      title: "My Java Learning Journey — From Zero to Autodidact",
+      description: "Notes, mistakes, and lessons from grinding Java fundamentals over days.",
+      youtube: "https://www.youtube.com/embed/grEKMHGYyns",
+      github: "https://github.com/Ibraheem0809",
+    },
+    {
+      title: "Cracking DSA with a Pattern-Based Approach",
+      description: "How I switched from random LeetCoding to disciplined pattern recognition.",
+      youtube: "https://www.youtube.com/embed/8hly31xKli0",
+      github: "https://github.com/Ibraheem0809",
+    },
+  ];

@@ -4,6 +4,8 @@ import RecentProjects from "@/components/RecentProjects";
 import Skills from "@/components/Skills";
 import Footer from "@/components/Footer";
 import { FloatingNav } from "@/components/ui/FloatingNav";
+import Certificates from "@/components/Certificate";
+import Blogs from "@/components/Blog";
 
 export default function Home() {
   return (
@@ -32,8 +34,16 @@ export default function Home() {
           <RecentProjects />
         </section>
 
+        <section id="certificate">
+          <Certificates />
+        </section>
+
         <section id="skills">
           <Skills />
+        </section>
+
+        <section>
+          <Blogs />
         </section>
 
         <section id="contact">
