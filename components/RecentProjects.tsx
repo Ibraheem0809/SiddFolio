@@ -1,59 +1,138 @@
-import { projects } from "@/data";
-import React from "react";
-import { PinContainer } from "./ui/3d-pin";
-import { FaLocationArrow } from "react-icons/fa";
+"use client";
 
-const RecentProjects = () => {
+import { motion } from "motion/react";
+import { ExternalLink, Sparkles } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
+
+import { PROJECTS } from "@/data/index";
+
+export function Projects() {
   return (
-    <div className="pt-20">
-      <h1 className="text-4xl md:text-5xl font-bold text-center">
-        A small selection of{" "}
-        <span className="text-purple-500">recent projects</span>
-      </h1>
-      <div className="flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10">
-        {projects.map(({ id, title, des, img, iconLists, link }) => (
-          <div
-            key={id}
-            className="sm:h-[41rem] h-[32rem] lg:min-h-[32.5rem] flex items-center justify-center sm:w-[570px] w-[80vw]"
-          >
-            <PinContainer title="visit" href={link}>
-              <div className="relative flex items-center justify-center sm:w-[500px] w-[80vw] overflow-hidden h-[30vh]  mb-10">
-                <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
-                  <img src="/bg.png" alt="bg-img" />
-                </div>
-                <img src={img} alt={title} className="z-10 absolute bottom-0" />
+    <section id="projects" className="relative py-32">
+      {/* Background Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40rem] h-[40rem] bg-purple-500/10 blur-3xl rounded-full" />
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Heading */}
+        <div className="flex flex-col items-center text-center mb-16">
+          <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md mb-5">
+            <Sparkles className="w-4 h-4 text-purple-400" />
+
+            <p className="text-sm text-neutral-300 tracking-wide">
+              Featured Work
+            </p>
+          </div>
+
+          <h1 className="text-4xl md:text-5xl font-bold">
+            Projects I&apos;m <span className="text-purple-500">proud of</span>
+          </h1>
+
+          <p className="mt-5 text-neutral-400 max-w-2xl mx-auto text-sm md:text-base">
+            A handful of projects I’ve built recently — blending modern UI,
+            full-stack development, and AI-powered experiences.
+          </p>
+        </div>
+
+        {/* Projects */}
+        <div className="grid sm:grid-cols-2 gap-6">
+          {PROJECTS.map((p, i) => (
+            <motion.article
+              key={p.title}
+              initial={{
+                opacity: 0,
+                y: 40,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                once: true,
+                margin: "-50px",
+              }}
+              transition={{
+                duration: 0.6,
+                delay: i * 0.08,
+              }}
+              whileHover={{
+                y: -6,
+              }}
+              className="group relative overflow-hidden rounded-3xl border border-white/10 bg-black-100/60 backdrop-blur-xl shadow-[0_0_30px_rgba(168,85,247,0.08)] hover:border-purple-500/30 transition-all duration-500"
+            >
+              {/* Image */}
+              <div className="relative aspect-[16/10] overflow-hidden">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+
+                {/* Spotlight */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                  style={{
+                    background:
+                      "radial-gradient(400px circle at 50% 30%, rgba(168,85,247,0.15), transparent 70%)",
+                  }}
+                />
               </div>
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                {title}
-              </h1>
-              <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2">
-                {des}
-              </p>
-              <div className="flex items-center justify-between mt-7 mb-3 ">
-                <div className="flex items-center">
-                  {iconLists.map((icon, index) => (
-                    <div
-                      key={icon}
-                      className="border border-white/[0.2] rounded-full bg-[#000319] lg:w-10 lg:h-10 w-8 h-8 flex items-center justify-center"
-                      style={{ transform: `translateX(-${5 * index * 2}px)` }}
+
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="text-xl md:text-2xl font-bold mb-3 text-white group-hover:text-purple-400 transition-all">
+                  {p.title}
+                </h3>
+
+                <p className="text-sm text-neutral-400 leading-relaxed mb-5">
+                  {p.description}
+                </p>
+
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {p.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-xs px-3 py-1 rounded-full border border-white/10 bg-white/5 text-neutral-300"
                     >
-                      <img src={icon} alt={icon} className="p-2" />
-                    </div>
+                      {tag}
+                    </span>
                   ))}
                 </div>
-                <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Git Repo
-                  </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
+
+                {/* Buttons */}
+                <div className="flex gap-3">
+                  {/* GitHub */}
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-sm hover:bg-white/10 transition"
+                  >
+                    <FaGithub size={14} className="text-purple-400" />
+
+                    <span className="text-neutral-200">Code</span>
+                  </a>
+
+                  {/* Live */}
+                  <a
+                    href={p.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-sm font-medium text-white hover:opacity-90 transition"
+                  >
+                    <ExternalLink size={14} />
+
+                    <span>Live Demo</span>
+                  </a>
                 </div>
               </div>
-            </PinContainer>
-          </div>
-        ))}
+            </motion.article>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
-};
-
-export default RecentProjects;
+}

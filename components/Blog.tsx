@@ -23,8 +23,7 @@ const Blogs = () => {
   return (
     <section id="blogs" className="relative overflow-hidden py-24">
       {/* Background Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40rem] h-[40rem] bg-blue-500/10 blur-3xl rounded-full" />
-
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40rem] h-[40rem] bg-purple-500/10 blur-3xl rounded-full" />
       <div className="relative z-10 max-w-7xl mx-auto px-5 md:px-10">
         {/* Heading */}
         <div className="flex flex-col items-center text-center mb-16">

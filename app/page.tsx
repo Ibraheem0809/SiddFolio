@@ -1,6 +1,6 @@
 import Hero from "@/components/Hero";
 import Grid from "@/components/Grid";
-import RecentProjects from "@/components/RecentProjects";
+import { Projects } from "@/components/RecentProjects";
 import Skills from "@/components/Skills";
 import Footer from "@/components/Footer";
 import { FloatingNav } from "@/components/ui/FloatingNav";
@@ -14,9 +14,11 @@ export default function Home() {
         {/* Navbar */}
         <FloatingNav
           navItems={[
-            { name: "Home", link: "#home" },
             { name: "About", link: "#about" },
             { name: "Projects", link: "#projects" },
+            { name: "Skills", link: "#skills" },
+            { name: "Certificates", link: "#certificate" },
+            { name: "Blogs", link: "#blog" },
             { name: "Contact", link: "#contact" },
           ]}
         />
@@ -31,18 +33,18 @@ export default function Home() {
         </section>
 
         <section id="projects">
-          <RecentProjects />
-        </section>
-
-        <section id="certificate">
-          <Certificates />
+          <Projects />
         </section>
 
         <section id="skills">
           <Skills />
         </section>
 
-        <section>
+        <section id="certificate">
+          <Certificates />
+        </section>
+
+        <section id="blog">
           <Blogs />
         </section>
 

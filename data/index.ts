@@ -1,4 +1,3 @@
-
   
   export const gridItems = [
     {
@@ -64,39 +63,39 @@
     },
   ];
   
-  export const projects = [
+  export const PROJECTS = [
     {
-      id: 1,
-      title: "Forever - E Commerce Platform",
-      des: "A beginner-friendly eCommerce project designed to showcase products and enable simple, smooth online shopping.",
-      img: "/project1.png",
-      iconLists: ["/frontend4.svg", "/tail.svg", "/backend1.svg", "/backend2.svg"],
-      link: "https://forever-app-seven.vercel.app/",
+      title: "Forever- Smart eCommerce",
+      description: "Smart e-commerce platform with virtual trial room, enabling users to try products and admins to manage inventory, orders, analytics",
+      image:"/ForeverProject.jpeg",
+      tags: ["React.js", "Node.js", "Express", "MongoDB", "NanoBanana", "Tailwind"],
+      github: "https://github.com",
+      live: "https://forever-frontend-three-gilt.vercel.app/",
     },
     {
-      id: 2,
-      title: "bStore - Book Store App",
-      des: "A beginner MERN CRUD project for managing books with create, read, update, and delete functionality.",
-      img: "/project2.jpeg",
-      iconLists: ["/backend3.svg", "/backend2.svg", "/frontend4.svg", "/backend1.svg", "/tail.svg"],
-      link: "https://github.com/Ibraheem0809/Book-Store",
+      title: "Grobuzz Media",
+      description: "Built Grobuzz Media website helping clients access company information, understand services, and connect for managing their projects online",
+      image: "/GrobuzzProject.jpeg",
+      tags: ["React.js", "Figma", "Framer Motion", "Tailwind"],
+      github: "https://github.com/Ibraheem0809/GroBuzz",
+      live: "https://grobuzz-pi.vercel.app/",
+    },
+    /* {
+      title: "Pulse Analytics",
+      description: "Self-hosted product analytics dashboard with realtime cohorts and funnel insights.",
+      image: project3,
+      tags: ["React", "ClickHouse", "Node", "D3"],
+      github: "https://github.com",
+      live: "https://example.com",
     },
     {
-      id: 3,
-      title: "iTask - Todo List App",
-      des: "A beginner React todo app to create, manage, and track daily tasks efficiently.",
-      img: "/project3.png",
-      iconLists: ["/frontend1.svg", "/frontend2.svg", "/frontend4.svg", "/frontend3.svg"],
-      link: "https://github.com/Ibraheem0809/React-Todo-List",
-    },
-    {
-      id: 4,
-      title: "Netflix Clone",
-      des: "A HTML and CSS project replicating Netflix's interface with a clean, responsive design.",
-      img: "/project4.png",
-      iconLists: ["/frontend1.svg", "/frontend2.svg", "/frontend3.svg"],
-      link: "https://github.com/Ibraheem0809/Netflix-Clone",
-    },
+      title: "Loop Chat",
+      description: "End-to-end encrypted team chat with threads, presence, and offline-first sync.",
+      image: project4,
+      tags: ["React", "WebRTC", "Supabase", "Zustand"],
+      github: "https://github.com",
+      live: "https://example.com",
+    }, */
   ];
   
   
@@ -155,8 +154,9 @@
         "/language1.svg",
         "/language2.svg",
         "/language3.svg",
+        "/frontend3.svg"
       ],
-      imgName: ["C","Java","Python"],
+      imgName: ["C","Java","Python","JavaScript"],
     },
     {
       id: 4,

@@ -6,6 +6,9 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="w-full pt-20 pb-10 relative z-10">
+      {/* Background Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[40rem] h-[40rem] bg-purple-500/10 blur-3xl rounded-full" />
+
       {/* background grid */}
       <div className="w-full absolute left-0 bottom-0 min-h-96 -z-10">
         <Image
@@ -17,9 +20,10 @@ const Footer = () => {
       </div>
 
       <div className="flex flex-col items-center">
-        <h1 className="text-4xl md:text-5xl font-bold text-center lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital
-          presence to the next level?
+        <h1 className="text-5xl md:text-6xl font-bold text-center lg:max-w-[55vw]">
+          Ready to take your{" "}
+          <span className="text-purple-500">digital presence</span> to the next
+          level?
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
           Reach out to me today and let&apos;s discuss how I can help you
